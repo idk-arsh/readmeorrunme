@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>readmeorrunme — local report</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; max-width: 60rem; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  .sub { color: #666; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; background: rgba(0,0,0,0.04); }
+  .green { color: #137333; font-weight: 600; }
+  .red   { color: #b3261e; font-weight: 600; }
+  .muted { color: #777; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+  <h1>readmeorrunme — local report</h1>
+  <div class="sub">Generated 2026-10-11 04:02 UTC · 2 target(s)</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Target</th>
+        <th>Last green</th>
+        <th>Last red</th>
+        <th>Mean TTFR (s)</th>
+        <th>Blocks (last run)</th>
+        <th>Failure bucket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>DuckDB Python client</strong><br /><span class="muted"><code>duckdb/duckdb</code></span></td>
+        <td><span class="green">2026-10-11</span></td>
+        <td><span class="muted">—</span></td>
+        <td>69.5</td>
+        <td>2/2 passed</td>
+        <td><span class="muted">—</span></td>
+      </tr>
+      <tr>
+        <td><strong>LangChain</strong><br /><span class="muted"><code>langchain-ai/langchain</code></span></td>
+        <td><span class="muted">—</span></td>
+        <td><span class="red">2026-10-11</span></td>
+        <td><span class="muted">—</span></td>
+        <td>1/2 passed · 1 skipped</td>
+        <td><code>missing-dep</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:2rem;font-size:0.85rem;">v0.1 · local-only · PR-first launch planned late November.</p>
+</body>
+</html>

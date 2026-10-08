@@ -1,0 +1,42 @@
+{
+  "target_id": "duckdb-python",
+  "target_name": "DuckDB Python client",
+  "repo": "duckdb/duckdb",
+  "readme_url": "https://raw.githubusercontent.com/duckdb/duckdb/main/tools/pythonpkg/README.md",
+  "base_image": "python:3.12-slim",
+  "started_at": "2026-10-11T04:00:03Z",
+  "finished_at": "2026-10-11T04:01:12Z",
+  "total_wall_seconds": 69.482,
+  "first_failure_index": null,
+  "blocks": [
+    {
+      "index": 0,
+      "language": "bash",
+      "heading": "Quick installation",
+      "content": "pip install duckdb --upgrade\n",
+      "exit_code": 0,
+      "stdout_tail": "Successfully installed duckdb-1.3.2\n",
+      "stderr_tail": "",
+      "wall_seconds": 14.221,
+      "timed_out": false,
+      "skipped": false,
+      "skip_reason": null,
+      "classification": null
+    },
+    {
+      "index": 1,
+      "language": "python",
+      "heading": "Quick installation",
+      "content": "import duckdb\ncon = duckdb.connect()\nprint(con.execute('select 42').fetchall())\n",
+      "exit_code": 0,
+      "stdout_tail": "[(42,)]\n",
+      "stderr_tail": "",
+      "wall_seconds": 1.044,
+      "timed_out": false,
+      "skipped": false,
+      "skip_reason": null,
+      "classification": null
+    }
+  ],
+  "container_error": null
+}
