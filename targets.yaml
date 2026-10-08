@@ -1,0 +1,70 @@
+# Seed targets for v0.1.
+#
+# Each target has:
+#   id:            short slug used on the CLI and in report paths
+#   name:          display name
+#   repo:          github.com/<owner>/<repo>
+#   branch:        branch the README is fetched from (defaults to main)
+#   readme_path:   path to the README inside the repo (handles sub-package layouts)
+#   base_image:    container image used to execute the quickstart blocks
+#   skip_reasons:  blocks containing any of these substrings are skipped and logged
+#                  (keeps API-key / GPU / cloud-auth examples out of the pass/fail stats)
+
+targets:
+  - id: dbt-core
+    name: dbt-core
+    repo: dbt-labs/dbt-core
+    branch: main
+    readme_path: README.md
+    base_image: python:3.12-slim
+    skip_reasons:
+      - "DBT_PROFILES_DIR"
+      - "snowflake"
+      - "bigquery"
+
+  - id: duckdb-python
+    name: DuckDB Python client
+    repo: duckdb/duckdb
+    branch: main
+    readme_path: tools/pythonpkg/README.md
+    base_image: python:3.12-slim
+    skip_reasons:
+      - "MOTHERDUCK_TOKEN"
+
+  - id: polars
+    name: Polars
+    repo: pola-rs/polars
+    branch: main
+    # top-level README; sub-packages have their own but we pick the root per spec
+    readme_path: README.md
+    base_image: python:3.12-slim
+    skip_reasons: []
+
+  - id: langchain
+    name: LangChain
+    repo: langchain-ai/langchain
+    branch: master
+    readme_path: README.md
+    base_image: python:3.12-slim
+    skip_reasons:
+      - "OPENAI_API_KEY"
+      - "ANTHROPIC_API_KEY"
+      - "api_key"
+
+  - id: motherduck
+    name: MotherDuck SDK
+    repo: motherduckdb/wasm-client
+    branch: main
+    readme_path: README.md
+    base_image: node:20-alpine
+    skip_reasons:
+      - "MOTHERDUCK_TOKEN"
+      - "service_token"
+
+  - id: astral-uv
+    name: Astral uv
+    repo: astral-sh/uv
+    branch: main
+    readme_path: README.md
+    base_image: python:3.12-slim
+    skip_reasons: []
